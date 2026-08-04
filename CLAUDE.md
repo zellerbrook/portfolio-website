@@ -54,15 +54,31 @@ Banned, because these are the fingerprints of an AI-generated site:
 
 The writing doc's instincts apply visually too. Puffery becomes an inflated hero. Rule of three becomes the three-card grid. Metronome rhythm becomes evenly weighted sections where nothing is emphasized.
 
-**Locked constraints:** _(to be filled in after Zach signs off on the type pairing, palette, and spacing scale — do not start building until these are agreed and written here)_
+**Locked constraints:** signed off Aug 3, 2026. Hold these on every page. Changing one is a conversation with Zach, not a judgment call.
+
+_Type._ Source Serif 4 (variable, optical sizing) for display and body. IBM Plex Mono for evidence. Both self-hosted as woff2 in `/fonts`, preloaded, never from a CDN.
+
+_The type rule._ Serif carries claims. Mono carries evidence: log lines, commit hashes, dates, milestone labels, command output, version numbers. This is the site's one signature device. Everything else stays quiet.
+
+_Palette, 4 values._ `#FFFFFF` paper, `#141416` ink, `#6E6E76` muted, `#2E6A5B` verdigris accent. Links are verdigris. No fifth color; rules and fills are tints of muted.
+
+_Spacing, 8px base._ `4 · 8 · 16 · 24 · 40 · 64 · 104 · 168`. No values between steps.
+
+_Type scale._ 13 / 15 / 18 / 21 / 26 / 34 / 40px. Body 18px at 1.65. Measure 34rem, roughly 62 characters.
+
+_Build._ Hand-written HTML, one stylesheet, zero dependencies. Revisit a generator around 15 pages.
+
+_Host._ Cloudflare Pages. GitHub Pages does not serve private repos on the free plan.
+
+Specimen used for sign-off: `docs/specimen.html`.
 
 ## Technical
 
 - Static HTML/CSS. No framework unless justified to Zach first. Minimal JS.
 - Semantic HTML, mobile-first, accessible, fast.
 - Run the `modern-web-guidance` skill before any HTML/CSS/client-side JS work. Not optional.
-- Deploy static to Cloudflare Pages or GitHub Pages. **Do not** make Zach's MacBook the public host. Self-hosting a mirror at home is a separate follow-on project, not part of launch.
-- Public GitHub repo is itself part of the portfolio. Real README, sensible commit messages, steady commits rather than one giant dump.
+- Deploy static to Cloudflare Pages. **Do not** make Zach's MacBook the public host. Self-hosting a mirror at home is a separate follow-on project, not part of launch.
+- The GitHub repo is part of the portfolio. Real README, sensible commit messages, steady commits rather than one giant dump. Private as of Aug 3, 2026; it goes public once the site is live and the history is worth reading. Treat every commit as eventually-public.
 
 ### Machine readability
 
@@ -80,7 +96,14 @@ All of this is free, adds no visual weight, and costs nothing at launch. Do it.
 
 ## Content plan
 
-Blog through-line, singular: a professional musician learning to build technical systems in public, using AI as a tool he's deliberately trying not to become dependent on. Musician-to-cyber is the setup. The Navy exit is the clock. The AI-collaboration struggle is the craft story and the real differentiator.
+Blog through-line, singular: building technical systems in public, using AI as a tool he's deliberately trying not to become dependent on. The AI-collaboration struggle is the craft story and the real differentiator.
+
+**Music and the Navy are context, not identity.** Revised Aug 3, 2026, and this supersedes the earlier framing. They say what's ending; the site is about where he's going. Rules:
+
+- The landing lede leads with what he builds. Music appears nowhere above the fold.
+- Music earns a mention only when it explains something specific about the technical work: pattern recognition, deliberate practice, performing when it has to work the first time. Evidence, never identity.
+- The About page tells the full story. Burying it there would read as evasive; leading with it reads as a musician who dabbles.
+- No post titles trading on the transition. Nothing shaped like "from stage to SOC."
 
 Register: honest, framed as method. Documenting a practice, not confessing. Never inspirational, never LinkedIn-voice.
 

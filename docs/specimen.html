@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Type and palette specimen — zachellerbrook.com</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300..700;1,8..60,300..700&family=Literata:ital,opsz,wght@0,7..72,300..700;1,7..72,300..700&family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&family=IBM+Plex+Mono:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #ffffff;
+    --ink: #141416;
+    --muted: #6e6e76;
+    --rule: #e3e3e6;
+    --verdigris: #2e6a5b;
+    --inkblue: #1f4a7a;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Source Serif 4", Georgia, serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 46rem; margin: 0 auto; padding: 4rem 1.5rem 8rem; }
+  .label {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 1.5rem;
+  }
+  hr { border: 0; border-top: 1px solid var(--rule); margin: 5rem 0; }
+  h1.doc { font-size: 1.5rem; font-weight: 600; margin: 0 0 0.5rem; }
+  p.doc { color: var(--muted); font-size: 1rem; line-height: 1.6; margin: 0 0 1rem; max-width: 34rem; }
+
+  /* --- specimen block --- */
+  .spec { max-width: 34rem; }
+  .spec .name { font-size: 2.25rem; line-height: 1.15; font-weight: 600; letter-spacing: -0.012em; margin: 0 0 1rem; }
+  .spec .lede { font-size: 1.25rem; line-height: 1.5; margin: 0 0 2.5rem; }
+  .spec h2 { font-size: 1.375rem; font-weight: 600; margin: 0 0 0.75rem; }
+  .spec p { font-size: 1.125rem; line-height: 1.65; margin: 0 0 1.25rem; }
+  .spec .meta {
+    font-size: 0.8125rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 0.5rem;
+  }
+  .spec .evidence {
+    font-size: 0.875rem;
+    line-height: 1.7;
+    color: var(--ink);
+    background: #f6f6f7;
+    padding: 0.75rem 1rem;
+    overflow-x: auto;
+    white-space: pre;
+    margin: 0 0 1.25rem;
+  }
+  .spec a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
+
+  /* pairings */
+  .pair-a { font-family: "Source Serif 4", Georgia, serif; }
+  .pair-a .meta, .pair-a .evidence { font-family: "IBM Plex Mono", ui-monospace, monospace; }
+  .pair-b { font-family: "Literata", Georgia, serif; }
+  .pair-b .meta, .pair-b .evidence { font-family: "IBM Plex Mono", ui-monospace, monospace; }
+  .pair-c { font-family: "Newsreader", Georgia, serif; }
+  .pair-c .meta, .pair-c .evidence { font-family: "JetBrains Mono", ui-monospace, monospace; }
+
+  /* accents */
+  .acc-verdigris a { color: var(--verdigris); }
+  .acc-inkblue a { color: var(--inkblue); }
+  .acc-none a { color: var(--ink); text-decoration-color: var(--verdigris); text-decoration-thickness: 2px; }
+
+  .swatches { display: flex; flex-wrap: wrap; gap: 1.5rem; margin: 0 0 2rem; }
+  .sw { width: 7rem; }
+  .sw .chip { height: 3.5rem; border: 1px solid var(--rule); }
+  .sw .hex { font-family: "IBM Plex Mono", monospace; font-size: 0.75rem; color: var(--muted); margin-top: 0.4rem; display: block; }
+
+  .scale { font-family: "IBM Plex Mono", monospace; font-size: 0.8125rem; color: var(--muted); }
+  .scale div { display: flex; align-items: center; gap: 1rem; margin-bottom: 0.4rem; }
+  .scale .bar { background: var(--verdigris); height: 0.5rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1 class="doc">Type and palette specimen</h1>
+  <p class="doc">Decision aid, not site code. Body copy below is placeholder and has not been through a voice pass. Fonts load from Google here for preview only; the real site self-hosts woff2 files.</p>
+
+  <hr>
+
+  <p class="label">Pairing A — Source Serif 4 + IBM Plex Mono</p>
+  <div class="spec pair-a acc-verdigris">
+    <p class="name">Zach Ellerbrook</p>
+    <p class="lede">Navy musician moving into security. I build things, break them, and write down what happened.</p>
+    <h2>SSH brute-force detector</h2>
+    <p class="meta">Python · milestones 1–2 complete</p>
+    <p>Parses <a href="#">auth.log</a>, groups failed authentications by source address, and flags anything crossing a threshold inside a rolling window. Milestone 2 added state so a restart doesn't lose the count.</p>
+    <p class="evidence">Failed password for invalid user admin from 203.0.113.44 port 54122 ssh2</p>
+  </div>
+
+  <hr>
+
+  <p class="label">Pairing B — Literata + IBM Plex Mono</p>
+  <div class="spec pair-b acc-verdigris">
+    <p class="name">Zach Ellerbrook</p>
+    <p class="lede">Navy musician moving into security. I build things, break them, and write down what happened.</p>
+    <h2>SSH brute-force detector</h2>
+    <p class="meta">Python · milestones 1–2 complete</p>
+    <p>Parses <a href="#">auth.log</a>, groups failed authentications by source address, and flags anything crossing a threshold inside a rolling window. Milestone 2 added state so a restart doesn't lose the count.</p>
+    <p class="evidence">Failed password for invalid user admin from 203.0.113.44 port 54122 ssh2</p>
+  </div>
+
+  <hr>
+
+  <p class="label">Pairing C — Newsreader + JetBrains Mono</p>
+  <div class="spec pair-c acc-verdigris">
+    <p class="name">Zach Ellerbrook</p>
+    <p class="lede">Navy musician moving into security. I build things, break them, and write down what happened.</p>
+    <h2>SSH brute-force detector</h2>
+    <p class="meta">Python · milestones 1–2 complete</p>
+    <p>Parses <a href="#">auth.log</a>, groups failed authentications by source address, and flags anything crossing a threshold inside a rolling window. Milestone 2 added state so a restart doesn't lose the count.</p>
+    <p class="evidence">Failed password for invalid user admin from 203.0.113.44 port 54122 ssh2</p>
+  </div>
+
+  <hr>
+
+  <p class="label">Accent — the same paragraph, three link treatments</p>
+  <div class="spec pair-a acc-verdigris">
+    <p>Verdigris. Read the <a href="#">SSH detector writeup</a> or the <a href="#">post about milestone 2</a>.</p>
+  </div>
+  <div class="spec pair-a acc-inkblue">
+    <p>Ink blue. Read the <a href="#">SSH detector writeup</a> or the <a href="#">post about milestone 2</a>.</p>
+  </div>
+  <div class="spec pair-a acc-none">
+    <p>Black text, accent underline only. Read the <a href="#">SSH detector writeup</a> or the <a href="#">post about milestone 2</a>.</p>
+  </div>
+
+  <hr>
+
+  <p class="label">Palette — four values</p>
+  <div class="swatches">
+    <div class="sw"><div class="chip" style="background:#ffffff"></div><span class="hex">#FFFFFF paper</span></div>
+    <div class="sw"><div class="chip" style="background:#141416"></div><span class="hex">#141416 ink</span></div>
+    <div class="sw"><div class="chip" style="background:#6E6E76"></div><span class="hex">#6E6E76 muted</span></div>
+    <div class="sw"><div class="chip" style="background:#2E6A5B"></div><span class="hex">#2E6A5B verdigris</span></div>
+    <div class="sw"><div class="chip" style="background:#1F4A7A"></div><span class="hex">#1F4A7A ink blue</span></div>
+  </div>
+
+  <hr>
+
+  <p class="label">Spacing scale — 8px base</p>
+  <div class="scale">
+    <div><span class="bar" style="width:4px"></span>4</div>
+    <div><span class="bar" style="width:8px"></span>8</div>
+    <div><span class="bar" style="width:16px"></span>16</div>
+    <div><span class="bar" style="width:24px"></span>24</div>
+    <div><span class="bar" style="width:40px"></span>40</div>
+    <div><span class="bar" style="width:64px"></span>64</div>
+    <div><span class="bar" style="width:104px"></span>104</div>
+    <div><span class="bar" style="width:168px"></span>168</div>
+  </div>
+
+</div>
+</body>
+</html>
