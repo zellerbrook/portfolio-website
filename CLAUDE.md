@@ -104,6 +104,7 @@ Blog through-line, singular: building technical systems in public, using AI as a
 - Music earns a mention only when it explains something specific about the technical work: pattern recognition, deliberate practice, performing when it has to work the first time. Evidence, never identity.
 - The About page tells the full story. Burying it there would read as evasive; leading with it reads as a musician who dabbles.
 - No post titles trading on the transition. Nothing shaped like "from stage to SOC."
+- Frame the background as an asset, never as something to be explained away. The Navy years are government service, instruction, and work held to a standard. When they appear, they appear as capability. No apologizing, no "despite," no career-change narrative arc.
 
 Register: honest, framed as method. Documenting a practice, not confessing. Never inspirational, never LinkedIn-voice.
 
