@@ -1,0 +1,5 @@
+.claude/
+anti-ai-writing-style.md
+site-build-kickoff-prompt.md
+*.odt
+.DS_Store
