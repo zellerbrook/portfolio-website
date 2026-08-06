@@ -114,6 +114,19 @@ Launch posts:
 2. SSH detector, milestones 1-2 — technical proof
 3. Learning to talk to the machine — the AI-collaboration post
 
+## Facts for copy
+
+Confirmed Aug 5, 2026. Use these verbatim rather than inferring.
+
+- **Name:** Zach Ellerbrook. **Location after separation:** Chicago area (flexible; hoping for west or northwest suburbs).
+- **Contact:** `zach@zachellerbrook.com`, forwarded free to Proton via Cloudflare Email Routing. Publish this address, not the Proton one.
+- **Clearance:** Secret, renewed January 2023. Publish level and status above the fold. Reinstatement eligibility runs about 24 months past separation.
+- **Links:** [github.com/zellerbrook](https://github.com/zellerbrook) · [linkedin.com/in/zachary-ellerbrook](https://www.linkedin.com/in/zachary-ellerbrook/)
+- **Flagship project:** [ssh-detect-respond](https://github.com/zellerbrook/ssh-detect-respond), public as of Aug 5, 2026. Milestones 1-2 done, milestone 3 resumes after site launch.
+- **Certs:** never on the landing page. Résumé page only. Of the eight held, TryHackMe SOC Level 1 and Google Cybersecurity are the two that map to blue-team work; the rest are filler in this context.
+- **Security+:** not scheduled, so it stays off the site entirely until there is a date.
+- **SkillBridge:** his pay grade caps it at 120 days. A full window starts around Mar 2, 2027 against a Jun 30, 2027 separation. Add an availability line only once the Hiring Our Heroes cohort question resolves. Frame as a concrete offer, never as a countdown.
+
 ## Working with Zach
 
 Direct, plain-spoken. No fluff, no gamification, no cheerleading. He's an intermediate Linux user: use real professional vocabulary, explain the why, flag risks before he acts.
