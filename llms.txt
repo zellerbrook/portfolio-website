@@ -1,0 +1,28 @@
+# Zach Ellerbrook
+
+> Placeholder bio. Replace with the one-paragraph version once the landing copy is settled.
+
+Clearance: Secret, renewed January 2023.
+Location: Chicago area from mid-2027.
+Contact: zach@zachellerbrook.com
+
+## Focus
+
+- Detection engineering and log analysis
+- Purple team work and security-awareness training
+
+## Projects
+
+- [ssh-detect-respond](https://github.com/zellerbrook/ssh-detect-respond): SSH brute-force detection and response tooling in Python.
+
+## Pages
+
+- [Work](https://zachellerbrook.com/work): projects, with code and write-ups.
+- [Writing](https://zachellerbrook.com/writing): notes on building in public.
+- [About](https://zachellerbrook.com/about): background and contact.
+- [Résumé](https://zachellerbrook.com/resume): experience, education, certifications.
+
+## Links
+
+- https://github.com/zellerbrook
+- https://www.linkedin.com/in/zachary-ellerbrook/
