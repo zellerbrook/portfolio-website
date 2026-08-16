@@ -4,12 +4,15 @@ description: Zach Ellerbrook's résumé. Navy IT service technician and security
 url: /resume
 updated: 2026-08-15
 status: publish
-source: Claude_Cowork/OUTPUTS/master-resume/resume-cybersecurity-website.md
+source: content/resume-source.md
 pdf: /zachary-ellerbrook-resume.pdf
 ---
 
-Rendered from the master résumé. Two deliberate differences from the PDF, both
-per CLAUDE.md:
+Rendered from the master résumé. `resume-source.md` is a verbatim snapshot of
+the file the PDF was built from, kept here so the page and the download can be
+diffed instead of drifting. They have drifted twice already.
+
+Two deliberate differences from the PDF, both per CLAUDE.md:
 
 - The SkillBridge availability line is held back until the Hiring Our Heroes
   cohort question resolves.
