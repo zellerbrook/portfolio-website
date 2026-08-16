@@ -219,7 +219,7 @@ main { padding-block: var(--s-7) var(--s-8); }
 
 .entries > li + li { margin-top: var(--s-5); }
 
-.entries h3 { margin: 0 0 var(--s-1); font-size: var(--t-body); }
+.entries :is(h2, h3) { margin: 0 0 var(--s-1); font-size: var(--t-body); }
 
 .entries p { margin: var(--s-1) 0 0; }
 
