@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ssh-detect-respond — Zach Ellerbrook</title>
+<meta name="description" content="A tool that reads SSH authentication logs and watches them for brute-force activity. Milestones 1 and 2 done, with the bugs written down.">
+<link rel="canonical" href="https://zachellerbrook.com/work/ssh-detect-respond">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Zach Ellerbrook">
+<meta property="og:url" content="https://zachellerbrook.com/work/ssh-detect-respond">
+<meta property="og:title" content="ssh-detect-respond">
+<meta property="og:description" content="A tool that reads SSH authentication logs and watches them for brute-force activity. Milestones 1 and 2 done, with the bugs written down.">
+<meta name="twitter:card" content="summary">
+<link rel="preload" href="/fonts/source-serif-4-roman.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/ibm-plex-mono-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "ssh-detect-respond",
+  "description": "A tool that reads SSH authentication logs and watches them for brute-force activity.",
+  "url": "https://zachellerbrook.com/work/ssh-detect-respond",
+  "codeRepository": "https://github.com/zellerbrook/ssh-detect-respond",
+  "programmingLanguage": "Python",
+  "dateModified": "2026-08-15",
+  "author": {
+    "@type": "Person",
+    "@id": "https://zachellerbrook.com/#person",
+    "name": "Zach Ellerbrook",
+    "url": "https://zachellerbrook.com/"
+  }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="page masthead">
+  <a class="wordmark" href="/">Zach Ellerbrook</a>
+  <nav aria-label="Primary">
+    <ul>
+      <li><a href="/work" aria-current="page">work</a></li>
+      <li><a href="/writing">writing</a></li>
+      <li><a href="/about">about</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main" class="page">
+<article>
+  <h1>ssh-detect-respond</h1>
+  <p class="meta">Python · updated <time datetime="2026-08-15">Aug 15, 2026</time></p>
+
+  <p class="lede">A tool that reads SSH authentication logs and watches them for brute-force activity.</p>
+
+  <p><code>fail2ban</code> already does this, and does it better than I will. I'm building it to understand how it works, and someday to put mine next to it and see how far off I am.</p>
+
+  <p>Status: milestones 1 and 2 done. Milestone 3 picks back up once this site is finished.</p>
+
+  <p><a href="https://github.com/zellerbrook/ssh-detect-respond">Source on GitHub</a></p>
+
+  <h2>What it reads</h2>
+
+  <p>Ubuntu writes a line to <code>/var/log/auth.log</code> every time someone tries to log in over SSH. Plain text, one line per attempt:</p>
+
+<pre tabindex="0"><code>Nov 12 09:15:22 target-vm sshd[2145]: Failed password for admin from 192.168.56.101 port 52344 ssh2</code></pre>
+
+  <p>Four things in there matter: when it happened, what IP it came from, what account was being tried, and whether it worked. The rest is noise, and most of the file is noise anyway. sudo, cron, every other service with something to say.</p>
+
+  <p>The first thing I got wrong was assuming my own machine had that file. It doesn't. I run CachyOS, which is Arch-based, and Arch logs to the systemd journal. <code>auth.log</code> is a Debian and Ubuntu convention. So before writing a line of code I had to work out that the machine I write on and the machine this runs on don't keep records the same way. I built against a saved sample instead.</p>
+
+  <h2>What it does</h2>
+
+  <p>Two pieces so far.</p>
+
+  <p><strong>Milestone 1, the parser.</strong> Takes one line of text, decides whether it's a login attempt, and pulls those four fields into a small record. Anything else gets thrown away. That's the whole job. It writes down facts, one line at a time, and it doesn't form an opinion about them.</p>
+
+  <p><strong>Milestone 2, the tail.</strong> Rather than reading the file once and quitting, it sits and watches the file grow, the way <code>tail -f</code> does. A new line shows up about a second later, no restart. It starts at the end of the file, so restarting the tool doesn't make it re-report last week's traffic as if it were happening now.</p>
+
+  <p>Opinions are milestone 3. That's where it starts counting failures and deciding something is an attack.</p>
+
+  <h2>What broke</h2>
+
+  <h3>A username with a space in it</h3>
+
+  <p>Doesn't sound like much until you sit with how literal a program is. When someone tries to log into an account that doesn't exist, the log says <code>for invalid user admin from</code> where I expected <code>for admin from</code>. My pattern was written to grab one word, so it matched nothing. The code assumed a match every time, so what I got back was:</p>
+
+<pre tabindex="0"><code>AttributeError: 'NoneType' object has no attribute 'group'</code></pre>
+
+  <p>Which means "your pattern found nothing, and then you tried to use the nothing."</p>
+
+  <h3>Log rotation, which is the good one</h3>
+
+  <p>Linux doesn't let log files grow forever. Once a day it renames <code>auth.log</code> out of the way and starts a fresh empty one. My tool kept reading the old renamed file, because it doesn't follow the name. It follows the actual file underneath.</p>
+
+  <p>No crash. No error. No warning. It quietly stopped seeing anything, forever, while looking completely fine.</p>
+
+  <p>That one stuck with me. A tool that crashes tells you it's broken. A tool that goes blind lets you keep trusting it. A security tool that goes blind is worse than no tool at all, because you assume you're covered while the attempts pile up unseen.</p>
+
+  <p>The fix is checking whether the file sitting at that path is still the same file I opened, and reopening if it isn't. There's a second flavor, where the file gets emptied in place instead of renamed, and that needs its own check.</p>
+
+  <h3>A red test that wasn't the code's fault</h3>
+
+  <p>A test failed and I assumed I'd broken something. I hadn't. My expectation was wrong. I'd written down what I thought the answer should be, and the code was right.</p>
+
+  <p>Small thing. But the reflex I want on the job is to work out which side is wrong before changing anything. Don't reflexively fix working code. Don't delete the test.</p>
+
+  <h3>The unglamorous ones</h3>
+
+  <p>I spent several minutes debugging output that made no sense before noticing I hadn't saved the file. I typed <code>test/</code> instead of <code>tests/</code>. I worked on this across 8 sessions before noticing the repo had no remote, so every commit lived on one desktop and nowhere else.</p>
+
+  <h2>Still broken</h2>
+
+  <p>I'd rather list these than sound finished.</p>
+
+  <ul>
+    <li><code>parse_line</code> assumes every pattern matches. A line shaped differently than expected raises <code>AttributeError</code> instead of getting skipped. The username bug found this. The fix isn't in yet.</li>
+    <li>The timestamp pattern misses single-digit days. Syslog pads them with two spaces (<code>Nov&nbsp;&nbsp;2</code>) and my pattern expects one.</li>
+    <li>The parser has never seen a log from a real internet-facing server. Everything so far is a saved sample.</li>
+  </ul>
+
+  <h2>What's next</h2>
+
+  <p>Milestone 3: counting failures inside a time window and deciding when that count is an attack. Then deciding what to do about it.</p>
+</article>
+</main>
+
+<footer class="page site-footer">
+  <ul>
+    <li><a href="https://github.com/zellerbrook">GitHub</a></li>
+    <li><a href="https://www.linkedin.com/in/zachary-ellerbrook/">LinkedIn</a></li>
+    <li><a href="mailto:zach@zachellerbrook.com">zach@zachellerbrook.com</a></li>
+  </ul>
+</footer>
+
+</body>
+</html>

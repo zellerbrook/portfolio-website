@@ -4,7 +4,7 @@ Operating notes for this repo. Read this before doing anything.
 
 ## What this is
 
-Zach Ellerbrook's personal site: portfolio front, blog behind. Zach is a Navy musician separating June 30, 2027, moving into cybersecurity. Target: purple team or security-awareness trainer, Chicago.
+Zach Ellerbrook's personal site: portfolio front, blog behind. Zach is a Navy musician separating June 30, 2027, moving into cybersecurity. Target: purple team or security-awareness trainer, Chicago. That specific target is planning context only. Site copy says "a career in cybersecurity" and names no role, decided Aug 10, 2026.
 
 His technical résumé is scattered and he has no industry work history yet. This site is how he compensates: proof of work, in public, over time.
 
@@ -25,6 +25,7 @@ Hard rules, no exceptions:
 - Section 3F negative parallelisms ("This isn't X, it's Y" and every variant). One instance means rewrite the sentence.
 - No em dashes
 - Sentence case in headers, not title case
+- No "try" when Zach is the subject. He's a Star Wars fan and it lands as the Yoda line. "Giving it a shot" is the replacement that worked. Describing someone else's attempt ("someone tries to log in over SSH") is fine and shouldn't be scrubbed. Grep drafts before showing him anything.
 
 Section 5 is the anti-overfitting guide. Don't apply the doc so rigidly that the writing reads as an AI imitating Zach.
 
@@ -96,7 +97,7 @@ All of this is free, adds no visual weight, and costs nothing at launch. Do it.
 
 ## Content plan
 
-Blog through-line, singular: building technical systems in public, using AI as a tool he's deliberately trying not to become dependent on. The AI-collaboration struggle is the craft story and the real differentiator.
+Blog through-line, singular: building technical systems in public, using AI as a tool he's deliberately working not to become dependent on. The AI-collaboration struggle is the craft story and the real differentiator.
 
 **Music and the Navy are context, not identity.** Revised Aug 3, 2026, and this supersedes the earlier framing. They say what's ending; the site is about where he's going. Rules:
 

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://zachellerbrook.com/</loc></url>
-  <url><loc>https://zachellerbrook.com/work</loc></url>
-  <url><loc>https://zachellerbrook.com/writing</loc></url>
-  <url><loc>https://zachellerbrook.com/about</loc></url>
-  <url><loc>https://zachellerbrook.com/resume</loc></url>
+  <url><loc>https://zachellerbrook.com/</loc><lastmod>2026-08-15</lastmod></url>
+  <url><loc>https://zachellerbrook.com/work</loc><lastmod>2026-08-15</lastmod></url>
+  <url><loc>https://zachellerbrook.com/work/ssh-detect-respond</loc><lastmod>2026-08-15</lastmod></url>
+  <url><loc>https://zachellerbrook.com/writing</loc><lastmod>2026-08-15</lastmod></url>
+  <url><loc>https://zachellerbrook.com/writing/why-im-writing-in-public</loc><lastmod>2026-08-15</lastmod></url>
+  <url><loc>https://zachellerbrook.com/about</loc><lastmod>2026-08-15</lastmod></url>
 </urlset>

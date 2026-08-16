@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Why I'm writing in public — Zach Ellerbrook</title>
+<meta name="description" content="Every piece of advice I've gotten about learning security came with an equal and opposite piece of advice. This is me asking to be corrected out loud.">
+<link rel="canonical" href="https://zachellerbrook.com/writing/why-im-writing-in-public">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Zach Ellerbrook">
+<meta property="og:url" content="https://zachellerbrook.com/writing/why-im-writing-in-public">
+<meta property="og:title" content="Why I'm writing in public">
+<meta property="og:description" content="Every piece of advice I've gotten about learning security came with an equal and opposite piece of advice. This is me asking to be corrected out loud.">
+<meta property="article:published_time" content="2026-08-15">
+<meta name="twitter:card" content="summary">
+<link rel="preload" href="/fonts/source-serif-4-roman.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/ibm-plex-mono-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Why I'm writing in public",
+  "description": "Every piece of advice I've gotten about learning security came with an equal and opposite piece of advice. This is me asking to be corrected out loud.",
+  "url": "https://zachellerbrook.com/writing/why-im-writing-in-public",
+  "mainEntityOfPage": "https://zachellerbrook.com/writing/why-im-writing-in-public",
+  "datePublished": "2026-08-15",
+  "author": {
+    "@type": "Person",
+    "@id": "https://zachellerbrook.com/#person",
+    "name": "Zach Ellerbrook",
+    "url": "https://zachellerbrook.com/"
+  }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="page masthead">
+  <a class="wordmark" href="/">Zach Ellerbrook</a>
+  <nav aria-label="Primary">
+    <ul>
+      <li><a href="/work">work</a></li>
+      <li><a href="/writing" aria-current="page">writing</a></li>
+      <li><a href="/about">about</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main" class="page">
+<article>
+  <h1>Why I'm writing in public</h1>
+  <p class="meta"><time datetime="2026-08-15">Aug 15, 2026</time></p>
+
+  <p class="lede">Every piece of advice I've gotten about learning security came with an equal and opposite piece of advice.</p>
+
+  <p>Build a website so people can find you. Don't build a website, nobody reads them, ship projects instead.</p>
+
+  <p>Work through the tutorials until the fundamentals stick. Stop doing tutorials, they're a trap, go build something broken and fix it.</p>
+
+  <p>Write your Python from scratch or you'll never really learn it. Use the AI and spend your time understanding the system instead of typing it out.</p>
+
+  <p>All of that came off Reddit, Discord, and whatever the algorithm decided I should see that week. Plenty of it from people who clearly know more than I do. None of it from anyone who has seen a line of my code.</p>
+
+  <p>Security is a community. Everybody says so, and from what I can see they're right. I've been standing in the online version of it, where the advice is constant and aimed at nobody in particular. The in-person kind meets at hours I don't have. I start around 5am, which is when nobody is meeting and everyone worth asking is asleep like a reasonable adult.</p>
+
+  <p>So this is me knocking.</p>
+
+  <p>If the work sits somewhere visible, somebody can tell me I'm wrong about it. That's the whole idea. I can't sort this much information on my own, and I've stopped pretending the reading list is going to sort itself.</p>
+
+  <p>The first real thing here is <a href="/work/ssh-detect-respond">a writeup of a tool I'm building</a> that reads SSH logs and watches for brute-force attempts. <code>fail2ban</code> already does that job, and does it better than I will. I'm building it to understand how it works. The writeup includes the bug I'm least proud of, where the tool quietly stopped seeing anything at all and kept looking perfectly healthy while it did. That's exactly the kind of thing I'd want a stranger to catch before I trusted it with something that mattered.</p>
+
+  <p>I'd rather be publicly wrong about that now than privately wrong about it in an interview.</p>
+
+  <p>There's one more thing I want to settle here, and it's the one I'm least sure about. I've been leaning on AI to write code I couldn't have written as quickly on my own, and I'm still working out what that's buying me and what it's costing.</p>
+
+  <p>I have opinions forming. That one gets its own post.</p>
+</article>
+</main>
+
+<footer class="page site-footer">
+  <ul>
+    <li><a href="https://github.com/zellerbrook">GitHub</a></li>
+    <li><a href="https://www.linkedin.com/in/zachary-ellerbrook/">LinkedIn</a></li>
+    <li><a href="mailto:zach@zachellerbrook.com">zach@zachellerbrook.com</a></li>
+  </ul>
+</footer>
+
+</body>
+</html>

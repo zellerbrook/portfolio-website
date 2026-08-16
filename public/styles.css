@@ -225,6 +225,33 @@ main { padding-block: var(--s-7) var(--s-8); }
 
 .entries .meta { display: block; }
 
+/* ---------- standing facts: mono, quiet, not a label row ---------- */
+
+.facts {
+  font-family: var(--mono);
+  font-size: var(--t-small);
+  font-variant-numeric: normal;
+  color: var(--muted);
+  line-height: 1.7;
+  list-style: none;
+  margin: 0 0 var(--s-5);
+  padding: 0;
+}
+
+/* ---------- long-form prose: posts and project write-ups ---------- */
+
+article ul {
+  margin: 0 0 var(--s-4);
+  padding-left: var(--s-4);
+}
+
+article li { margin-bottom: var(--s-2); }
+
+.portrait {
+  max-width: 20rem;
+  margin: 0 0 var(--s-5);
+}
+
 /* ---------- footer ---------- */
 
 .site-footer {
