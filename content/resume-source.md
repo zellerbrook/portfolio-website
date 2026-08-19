@@ -56,7 +56,7 @@ Parses SSH authentication logs into structured events (timestamp, source IP, use
 
 ## CERTIFICATIONS
 
-Google Cybersecurity Professional Certificate (2024) · Google IT Support Professional Certificate (2024) · Fortinet Networking Fundamentals (2025) · TryHackMe SOC Level 1 (2025) · TryHackMe Cyber Security 101 (2025) · ZTM Complete Python Developer (2026) · ZTM DevOps Bootcamp: Linux Sysadmin (2026) · Google AI Essentials (2024)
+Google Cybersecurity Professional Certificate (2024) · Google IT Support Professional Certificate (2024) · Fortinet Networking Fundamentals (2025) · TryHackMe SOC Level 1 (2025) · TryHackMe Cyber Security 101 (2025) · ZTM Complete Python Developer (2026) · ZTM DevOps Bootcamp: Linux Sysadmin (2026) · Claude 101 (2026) · Claude Code 101 (2026) · Google AI Essentials (2024)
 
 ## EDUCATION
 

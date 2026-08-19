@@ -2,7 +2,7 @@
 title: Résumé
 description: Zach Ellerbrook's résumé. Navy IT service technician and security manager liaison, active Secret clearance, Python and Linux projects built in public.
 url: /resume
-updated: 2026-08-15
+updated: 2026-08-19
 status: publish
 source: content/resume-source.md
 pdf: /zachary-ellerbrook-resume.pdf
