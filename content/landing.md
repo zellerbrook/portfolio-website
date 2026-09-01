@@ -1,6 +1,6 @@
 ---
 title: Zach Ellerbrook
-description: I build tools that read logs and flag what looks wrong, and I write down what broke on the way. Secret clearance. Chicago area from mid-2027.
+description: Access control and personnel security for a 40-person Navy organization, inside an RMF-governed federal system. Secret clearance. Chicago area from mid-2027.
 url: /
 date: 2026-08-15
 status: publish
@@ -8,14 +8,17 @@ status: publish
 
 # Zach Ellerbrook
 
-I work on small security projects and write up what breaks along the way.
+I do access control and personnel security administration for a 40-person Navy organization, inside a federal system governed by RMF. Two years of that work, about one of them formally designated.
+
+On my own time I build security tools and write up what breaks along the way.
 
 Right now that's [`ssh-detect-respond`](/work/ssh-detect-respond), a Python tool that follows SSH authentication logs and watches for brute-force attempts. Milestones 1 and 2 are done. The writeup includes the bug that made it stop seeing anything at all while it went right on looking healthy.
 
 The writing is mostly about building technical things while deliberately working not to get dependent on the AI helping me build them.
 
-IT service technician and security manager liaison, Navy Band Great Lakes.
-Secret clearance, renewed January 2023.
+Access administration and personnel security for a 40-person organization at Navy Band Great Lakes, in an RMF-governed federal system.
+Secret clearance. Tier 3R investigation adjudicated January 2023, Continuous Evaluation since January 2025.
+Available from late February 2027 through SkillBridge.
 Navy career ends June 30, 2027.
 Chicago area after that.
 

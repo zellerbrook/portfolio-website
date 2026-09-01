@@ -1,6 +1,6 @@
 ---
 title: About
-description: Zach Ellerbrook. Detection tooling and writeups, a Secret clearance, and a Navy career ending June 30, 2027. Aiming at a career in cybersecurity, Chicago area.
+description: Zach Ellerbrook. Access control and personnel security for a 40-person Navy organization in an RMF-governed federal system. Secret clearance. Chicago area.
 url: /about
 date: 2026-08-15
 status: publish
@@ -10,15 +10,23 @@ image_alt: Zach Ellerbrook on a rooftop, Chicago buildings behind him in late af
 
 # About
 
-I build small security projects and write down what I learn doing them. At the moment that's a Python tool that reads SSH authentication logs and watches for brute-force attempts, along with the writeups that go with it.
+In the Navy I'm the security manager liaison and NMCI telecommunications officer for Navy Band Great Lakes, a 40-person organization. Formally designated since November 2025, doing the work since 2024. It runs inside a federal system governed by RMF.
 
-In the Navy I'm the IT service technician and security manager liaison for Navy Band Great Lakes. The technician half means I'm the first call when something stops working, which is more turning it off and back on again than I'd care to admit. Anything that has to touch the network itself goes to NMCI field services.
+The job comes down to four questions about every person in the command. Who are they, what can they get to, who said they could, and is that still true.
 
-The liaison half is paperwork. System authorization requests and SharePoint permission requests come to me first, and I review them and pass them up the chain. Same with SAAR forms, which go to the security managers who do the actual verification. I also track when people's clearances are coming due.
+System authorization requests come to me first. I check each SAAR-N for completeness and for the right access level, verify need-to-know before I route anything, and screen the package against the person's clearance status before it goes to the NSTC security manager. Adjudication authority sits there, not with me. That split is deliberate and I'm the gate in front of it.
 
-I'm aiming at a career in cybersecurity.
+Day to day the rest is entitlement provisioning across SharePoint and the file shares, granted by rank and collateral duty, and account lifecycle through NMCI. MAC actions, dormancy requests, principal-user changes, distribution list changes as people arrive and leave, all tracked to closure. I keep the clearance expiration roster current for the whole command. Most of it moves SSNs around, so all of it runs under the Privacy Act.
 
-I hold a Secret clearance, renewed January 2023. My Navy career ends June 30, 2027, and I'll be in the Chicago area after that, hopefully the west or northwest suburbs.
+I also train incoming members on the enterprise systems and the security expectations attached to them. I have an M.S. in Education and 8 years of running instruction for adults, which is the half of security awareness work that's actually hard. Writing the content is easy. Getting it to land on someone who didn't ask for it is not.
+
+I'm the first call when something stops working, too, which is more turning it off and back on again than I'd care to admit. Anything that has to touch the network itself goes to NMCI field services.
+
+On my own time I build security tools and write down what I learn doing them. At the moment that's a Python tool that reads SSH authentication logs and watches for brute-force attempts, along with the writeups that go with it.
+
+The civilian name for the day job is identity and access management, and past that, the risk and compliance side it answers to. That's the work I'm looking for in Chicago.
+
+I hold a Secret clearance. Tier 3R investigation, adjudicated January 2023, Continuous Evaluation since January 2025. My Navy career ends June 30, 2027, and I'm available from late February 2027 through SkillBridge. Chicago area after that, hopefully the west or northwest suburbs.
 
 ## How I got here
 
