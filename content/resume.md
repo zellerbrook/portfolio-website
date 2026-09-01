@@ -18,5 +18,10 @@ level and status only, both came off on Aug 31, 2026. Full clearance detail and
 the late-February availability line publish everywhere, and CLAUDE.md records
 the reversal.
 
+**Pending:** the headcount went to 40 everywhere on Aug 31, 2026. The page and
+`resume-source.md` carry it. The PDF still says 35-40 and needs a rebuild with
+pandoc, which is not installed on the Linux box. Rebuild before the next deploy
+so the download matches the page.
+
 Em dashes in the source are converted, headers are sentence case, and the
 certification list leads with the two that map to blue-team work.

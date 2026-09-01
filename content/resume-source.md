@@ -8,7 +8,7 @@ Greater Chicago, IL · zach@zachellerbrook.com · linkedin.com/in/zachary-ellerb
 
 ## SUMMARY
 
-Security and compliance practitioner with two years of access control and personnel security administration inside a federal, RMF-governed environment. Designated NMCI Telecommunications Officer and Security Manager Liaison for a 35–40-person Navy organization — SAAR-N authorization review, least-privilege verification, account lifecycle, and clearance tracking, with Privacy Act PII handling throughout. Currently owns the command's migration of 32 enterprise workstations to the Navy's Nautilus environment as its only IT resource. Backed by 24 years of program management under external audit, plus hands-on Linux administration, a home pentesting lab, and a Python log-analysis tool built from scratch. Active Secret clearance (Tier 3R, adjudicated Jan 2023, Continuous Evaluation). SkillBridge-available from late February 2027; separates 30 June 2027.
+Security and compliance practitioner with two years of access control and personnel security administration inside a federal, RMF-governed environment. Designated NMCI Telecommunications Officer and Security Manager Liaison for a 40-person Navy organization — SAAR-N authorization review, least-privilege verification, account lifecycle, and clearance tracking, with Privacy Act PII handling throughout. Currently owns the command's migration of 32 enterprise workstations to the Navy's Nautilus environment as its only IT resource. Backed by 24 years of program management under external audit, plus hands-on Linux administration, a home pentesting lab, and a Python log-analysis tool built from scratch. Active Secret clearance (Tier 3R, adjudicated Jan 2023, Continuous Evaluation). SkillBridge-available from late February 2027; separates 30 June 2027.
 
 ## TECHNICAL SKILLS
 
@@ -21,7 +21,7 @@ Security and compliance practitioner with two years of access control and person
 ### IT Systems Technician & Security Manager Liaison — U.S. Navy, Navy Band Great Lakes, IL
 *Nov 2025 – Present · collateral IT support duties since 2024*
 
-- Designated NMCI Telecommunications Officer and Security Manager Liaison — sole point of contact for network access, endpoint support, and personnel-security administration for a 35–40-person command.
+- Designated NMCI Telecommunications Officer and Security Manager Liaison — sole point of contact for network access, endpoint support, and personnel-security administration for a 40-person command.
 - Own the unit's ongoing migration of 32 enterprise workstations to the Navy's Nautilus environment as the command's sole IT resource — 15 were converted before the role transferred to me; the remaining 17 are mine to carry through cutover.
 - Diagnosed the constraint that had stalled the migration — the absence of scanning capability on converted systems — and resumed the conversion path once a deployed printer update restored it.
 - Sequenced the remaining conversions at one workstation per day, phasing cutover around a live performance schedule that takes operational priority so no rehearsal or performance commitment is disrupted; coordinate authorization directly with Navy Music IT and the command's department head.
