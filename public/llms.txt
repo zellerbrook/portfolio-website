@@ -17,6 +17,7 @@ Contact: zach@zachellerbrook.com
 
 ## Projects
 
+- Nautilus workstation migration: owns the migration of 32 enterprise workstations to the Navy's Nautilus environment at Navy Band Great Lakes as the command's only IT resource. 15 were converted before the role transferred to him; the remaining 17 are his through cutover. In progress. Listed at https://zachellerbrook.com/work
 - [ssh-detect-respond](https://zachellerbrook.com/work/ssh-detect-respond): SSH brute-force detection and response tooling in Python. Milestones 1 and 2 done. Source: https://github.com/zellerbrook/ssh-detect-respond
 
 ## Pages
