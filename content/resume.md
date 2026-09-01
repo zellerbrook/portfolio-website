@@ -1,6 +1,6 @@
 ---
 title: Résumé
-description: Zach Ellerbrook's résumé. Access control and personnel security for a 40-person Navy organization, Secret clearance, Nautilus migration, Linux and Python.
+description: Zach Ellerbrook's résumé. Access control and personnel security for a 35 to 40 person Navy command, Secret clearance, Nautilus migration, Linux and Python.
 url: /resume
 updated: 2026-08-31
 status: publish
@@ -18,10 +18,10 @@ level and status only, both came off on Aug 31, 2026. Full clearance detail and
 the late-February availability line publish everywhere, and CLAUDE.md records
 the reversal.
 
-**Pending:** the headcount went to 40 everywhere on Aug 31, 2026. The page and
-`resume-source.md` carry it. The PDF still says 35-40 and needs a rebuild with
-pandoc, which is not installed on the Linux box. Rebuild before the next deploy
-so the download matches the page.
+Headcount reads 35 to 40 on the page and 35–40 in the source, matching the PDF.
+The command fluctuates in that range. One loose end: the operations-department
+bullet says "40-person organization" because that is what the PDF says. Square
+it whenever the PDF is next rebuilt.
 
 Em dashes in the source are converted, headers are sentence case, and the
 certification list leads with the two that map to blue-team work.

@@ -1,6 +1,6 @@
 ---
 title: About
-description: Zach Ellerbrook. Access control and personnel security for a 40-person Navy organization in an RMF-governed federal system. Secret clearance. Chicago area.
+description: Zach Ellerbrook. Access control and personnel security for a 35 to 40 person Navy organization in an RMF-governed federal system. Secret clearance. Chicago.
 url: /about
 date: 2026-08-15
 status: publish
@@ -10,7 +10,7 @@ image_alt: Zach Ellerbrook on a rooftop, Chicago buildings behind him in late af
 
 # About
 
-In the Navy I'm the IT systems technician and security manager liaison for Navy Band Great Lakes, a 40-person organization. Formally designated the command's NMCI telecommunications officer and security manager liaison in November 2025, doing the work since 2024. It runs inside a federal system governed by RMF.
+In the Navy I'm the IT systems technician and security manager liaison for Navy Band Great Lakes, a 35 to 40 person organization. Formally designated the command's NMCI telecommunications officer and security manager liaison in November 2025, doing the work since 2024. It runs inside a federal system governed by RMF.
 
 The job comes down to four questions about every person in the command. Who are they, what can they get to, who said they could, and is that still true.
 
