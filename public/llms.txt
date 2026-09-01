@@ -1,15 +1,19 @@
 # Zach Ellerbrook
 
-> Zach Ellerbrook works on small security projects and writes up what breaks along the way. In the Navy he is the IT service technician and security manager liaison for Navy Band Great Lakes, where he handles first-line IT support, reviews system authorization and SharePoint permission requests, reviews SAAR forms before they reach the security managers, and tracks clearance expirations. He is moving into a career in cybersecurity.
+> Zach Ellerbrook does access control and personnel security administration for Navy Band Great Lakes, a 40-person organization, inside a federal system governed by RMF. Designated security manager liaison and NMCI telecommunications officer since November 2025, doing the work since 2024. He is the command's single point of contact for it: SAAR-N access request review and access-level validation, need-to-know verification before routing, entitlement provisioning across SharePoint and file shares, account lifecycle administration through NMCI tracked to closure, and clearance expiration tracking for the whole command, all handling PII under the Privacy Act. Screening sits with him and adjudication authority sits with the NSTC security manager. He is looking for identity and access management work in Chicago, and the risk and compliance work past it.
 
-Clearance: Secret, renewed January 2023.
+Clearance: Secret. Tier 3R investigation adjudicated January 2023, Continuous Evaluation since January 2025.
+Availability: late February 2027 through SkillBridge. Navy career ends June 30, 2027.
 Location: Chicago area from mid-2027.
 Contact: zach@zachellerbrook.com
 
 ## Focus
 
+- Identity and access administration: access request review, entitlement provisioning, account lifecycle
+- Personnel security: clearance lifecycle tracking, PII handling under the Privacy Act
+- Authorization workflow under documented criteria, with screening separated from adjudication authority
+- Security awareness training design and delivery (M.S. Education, 8 years facilitating instruction for adults)
 - Linux, Python, and log analysis
-- Small security projects, built and documented in public
 
 ## Projects
 
