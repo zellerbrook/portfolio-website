@@ -4,9 +4,15 @@ Operating notes for this repo. Read this before doing anything.
 
 ## What this is
 
-Zach Ellerbrook's personal site: portfolio front, blog behind. Zach is a Navy musician separating June 30, 2027, moving into cybersecurity. Target: purple team or security-awareness trainer, Chicago. That specific target is planning context only. Site copy says "a career in cybersecurity" and names no role, decided Aug 10, 2026.
+Zach Ellerbrook's personal site: portfolio front, blog behind. Zach separates from the Navy June 30, 2027. Target, committed Aug 27, 2026: identity and access management as the entry vehicle, governance, risk, and compliance as the destination. Chicago. Purple team and security-awareness-trainer-as-primary are retired.
 
-His technical résumé is scattered and he has no industry work history yet. This site is how he compensates: proof of work, in public, over time.
+**The naming rule, revised Aug 27, 2026 (supersedes the Aug 10 rule that named no role).** Site copy names IAM and GRC explicitly. Job titles still stay off the site: no "aspiring GRC Analyst," no claimed titles he does not hold. Comp never appears anywhere, on any page, in any file.
+
+He does IAM work every day inside an RMF-governed federal system. The site's job is to say so in the vocabulary a GRC or IAM hiring manager screens for, and to show the scope he is accountable for rather than claiming leadership as an adjective.
+
+**Ownership and scale carry equal weight with the vocabulary.** He has run programs: sole point of contact for access administration across a 35-40 person organization, sole IT resource on a 32-workstation enterprise migration, a safety program through external inspection with zero findings, 107 purchase actions with zero discrepancies. Wherever the access work appears, the reader should finish knowing he was accountable for it, not assisting with it. Show the scope and let it do the work.
+
+**Every reframe has to survive a follow-up question.** If the page says "least-privilege enforcement," a hiring manager can ask him to walk through a request he denied. Nothing goes on the site that he would have to walk back. When a claim's defensibility is unclear, ask him.
 
 Two audiences, in this order:
 
@@ -121,12 +127,14 @@ Confirmed Aug 5, 2026. Use these verbatim rather than inferring.
 
 - **Name:** Zach Ellerbrook. **Location after separation:** Chicago area (flexible; hoping for west or northwest suburbs).
 - **Contact:** `zach@zachellerbrook.com`, forwarded free to Proton via Cloudflare Email Routing. Publish this address, not the Proton one.
-- **Clearance:** Secret, renewed January 2023. Publish level and status above the fold. Reinstatement eligibility runs about 24 months past separation.
+- **Current role:** designated NMCI Telecommunications Officer and Security Manager Liaison since November 2025 (collateral IT support duties since 2024). Access administration for a 35-40 person organization in an RMF-governed federal environment. Security duration is two years, not three.
+- **Nautilus migration:** owns the command's migration of 32 enterprise workstations as its sole IT resource. 15 were converted before the role transferred to him; the remaining 17 are his through cutover. Never write it as 32 conversions of his own.
+- **Clearance:** Secret. Tier 3R investigation adjudicated January 2023, Continuous Evaluation since January 2025. Full detail publishes above the fold as of Aug 31, 2026, superseding the level-and-status-only rule. Reinstatement eligibility runs about 24 months past separation.
 - **Links:** [github.com/zellerbrook](https://github.com/zellerbrook) · [linkedin.com/in/zachary-ellerbrook](https://www.linkedin.com/in/zachary-ellerbrook/)
 - **Flagship project:** [ssh-detect-respond](https://github.com/zellerbrook/ssh-detect-respond), public as of Aug 5, 2026. Milestones 1-2 done, milestone 3 resumes after site launch.
 - **Certs:** never on the landing page. Résumé page only. Of the eight held, TryHackMe SOC Level 1 and Google Cybersecurity are the two that map to blue-team work; the rest are filler in this context.
 - **Security+:** not scheduled, so it stays off the site entirely until there is a date.
-- **SkillBridge:** his pay grade caps it at 120 days. A full window starts around Mar 2, 2027 against a Jun 30, 2027 separation. Add an availability line only once the Hiring Our Heroes cohort question resolves. Frame as a concrete offer, never as a countdown.
+- **SkillBridge:** his pay grade caps it at 120 days. Publishes as "available from late February 2027 through SkillBridge," cleared Aug 31, 2026, superseding the hold pending the Hiring Our Heroes cohort question. He can start then and burn terminal leave for any remaining days. Frame as a concrete offer, never as a countdown.
 
 ## Working with Zach
 
