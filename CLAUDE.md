@@ -118,7 +118,7 @@ Register: honest, framed as method. Documenting a practice, not confessing. Neve
 Launch posts:
 
 1. Why I'm writing in public — rough notes in `post-1-draft-rough-notes.odt`
-2. SSH detector, milestones 1-2 — technical proof
+2. SSH detector, the threshold sweep — technical proof. Settled Sep 4, 2026: the post is the derivation of 3-in-600 from 34 days of replayed auth logs, including the self-lockout, not a milestone recap. The scoping-closed story stays on the project page and in the repo's `SCOPE.md`.
 3. Learning to talk to the machine — the AI-collaboration post
 
 ## Facts for copy
@@ -131,7 +131,7 @@ Confirmed Aug 5, 2026. Use these verbatim rather than inferring.
 - **Nautilus migration:** owns the command's migration of 32 enterprise workstations as its sole IT resource. 15 were converted before the role transferred to him; the remaining 17 are his through cutover. Never write it as 32 conversions of his own.
 - **Clearance:** Secret. Tier 3R investigation adjudicated January 2023, Continuous Evaluation since January 2025. Full detail publishes above the fold as of Aug 31, 2026, superseding the level-and-status-only rule. Reinstatement eligibility runs about 24 months past separation.
 - **Links:** [github.com/zellerbrook](https://github.com/zellerbrook) · [linkedin.com/in/zachary-ellerbrook](https://www.linkedin.com/in/zachary-ellerbrook/)
-- **Flagship project:** [ssh-detect-respond](https://github.com/zellerbrook/ssh-detect-respond), public as of Aug 5, 2026. Milestones 1-2 done, milestone 3 resumes after site launch.
+- **Flagship project:** [ssh-detect-respond](https://github.com/zellerbrook/ssh-detect-respond), public as of Aug 5, 2026. **Complete as scoped, not paused**, as of Sep 4, 2026. Milestones 1 through 3 and 9 done, 20 tests. Milestones 4 through 8 cut on purpose; `SCOPE.md` in the repo is the record. Threshold derived from 34 days of real auth logs replayed at 20 settings. The false-positive column has n=1, so those figures are counts and never publish as rates. The raw capture stays unpublished; findings only.
 - **Certs:** never on the landing page. Résumé page only. Of the eight held, TryHackMe SOC Level 1 and Google Cybersecurity are the two that map to blue-team work; the rest are filler in this context.
 - **Security+:** not scheduled, so it stays off the site entirely until there is a date.
 - **SkillBridge:** his pay grade caps it at 120 days. Publishes as "available from late February 2027 through SkillBridge," cleared Aug 31, 2026, superseding the hold pending the Hiring Our Heroes cohort question. He can start then and burn terminal leave for any remaining days. Frame as a concrete offer, never as a countdown.

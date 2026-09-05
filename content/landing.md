@@ -12,7 +12,7 @@ I do access control and personnel security administration for a 35 to 40 person 
 
 On my own time I build security tools and write up what breaks along the way.
 
-Right now that's [`ssh-detect-respond`](/work/ssh-detect-respond), a Python tool that follows SSH authentication logs and watches for brute-force attempts. Milestones 1 and 2 are done. The writeup includes the bug that made it stop seeing anything at all while it went right on looking healthy.
+Right now that's [`ssh-detect-respond`](/work/ssh-detect-respond), a Python tool that follows SSH authentication logs and watches for brute-force attempts. It's finished as scoped, and its default threshold comes from replaying 34 days of real auth logs through it at 20 different settings. Including the setting that would have locked me out of my own server.
 
 The writing is mostly about building technical things while deliberately working not to get dependent on the AI helping me build them.
 
