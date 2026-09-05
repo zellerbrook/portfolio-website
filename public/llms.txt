@@ -29,6 +29,7 @@ Contact: zach@zachellerbrook.com
 
 ## Writing
 
+- [The threshold that locked me out](https://zachellerbrook.com/writing/the-threshold-that-locked-me-out), Sep 4, 2026. Deriving a detection threshold from 34 days of real auth logs, the n=1 limit on the false-positive figures, and the self-lockout that argues for an allowlist.
 - [Why I'm writing in public](https://zachellerbrook.com/writing/why-im-writing-in-public), Aug 15, 2026.
 
 ## Links

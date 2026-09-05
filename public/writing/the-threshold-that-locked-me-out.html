@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The threshold that locked me out — Zach Ellerbrook</title>
+<meta name="description" content="My detector blocks an IP after 3 failed passwords in 600 seconds. I replayed 34 days of real auth logs to find out whether that number deserved to be there, and the only legitimate user it would have blocked was me.">
+<link rel="canonical" href="https://zachellerbrook.com/writing/the-threshold-that-locked-me-out">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Zach Ellerbrook">
+<meta property="og:url" content="https://zachellerbrook.com/writing/the-threshold-that-locked-me-out">
+<meta property="og:title" content="The threshold that locked me out">
+<meta property="og:description" content="My detector blocks an IP after 3 failed passwords in 600 seconds. I replayed 34 days of real auth logs to find out whether that number deserved to be there, and the only legitimate user it would have blocked was me.">
+<meta property="article:published_time" content="2026-09-04">
+<meta name="twitter:card" content="summary">
+<link rel="preload" href="/fonts/source-serif-4-roman.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/ibm-plex-mono-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "The threshold that locked me out",
+  "description": "My detector blocks an IP after 3 failed passwords in 600 seconds. I replayed 34 days of real auth logs to find out whether that number deserved to be there, and the only legitimate user it would have blocked was me.",
+  "url": "https://zachellerbrook.com/writing/the-threshold-that-locked-me-out",
+  "mainEntityOfPage": "https://zachellerbrook.com/writing/the-threshold-that-locked-me-out",
+  "datePublished": "2026-09-04",
+  "author": {
+    "@type": "Person",
+    "@id": "https://zachellerbrook.com/#person",
+    "name": "Zach Ellerbrook",
+    "url": "https://zachellerbrook.com/"
+  }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="page masthead">
+  <a class="wordmark" href="/">Zach Ellerbrook</a>
+  <nav aria-label="Primary">
+    <ul>
+      <li><a href="/work">work</a></li>
+      <li><a href="/writing" aria-current="page">writing</a></li>
+      <li><a href="/about">about</a></li>
+      <li><a href="/resume">résumé</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main" class="page">
+<article>
+  <h1>The threshold that locked me out</h1>
+  <p class="meta"><time datetime="2026-09-04">Sep 4, 2026</time></p>
+
+  <p class="lede">My SSH detector blocks an address after 3 failed passwords in 600 seconds.</p>
+
+  <p>That number sat in the code for weeks before I could tell you why it was 3 and not 5. It looked reasonable. It matched what I'd seen elsewhere. Nobody was going to ask.</p>
+
+  <p>Then I read a control mapping I'd written for the same project, saw the line where I'd have to hand an assessor my configuration and defend it, and realized I had a number and no argument.</p>
+
+  <p>So I went and got one.</p>
+
+  <p>I had 34 days of auth logs sitting on a VPS I ran, an old website host that was on its way to being decommissioned. 1,233,435 lines. I wrote a script that replays the whole capture through the actual detector, unmodified, at 20 different settings: thresholds of 2, 3, 5, 10 and 20, crossed with windows of 60, 300, 600 and 3600 seconds. Then it reports what each setting would have caught.</p>
+
+  <p>That's the whole idea. Take the real thing, feed it real traffic, and read the results off the grid instead of off a tutorial.</p>
+
+  <p>1,914 distinct addresses hit that box in 34 days. 1,878 of them failed a password at least once, which tells you what the open internet does to port 22 when nobody's watching. At 3 in 600, the detector would have flagged 1,481 of them.</p>
+
+  <p>397 would have walked. That's the number I care about most, because it's the traffic the control misses, and I'd rather write it down myself than have somebody else find it in my grid.</p>
+
+  <p>Here's where it gets uncomfortable.</p>
+
+  <p>In 34 days, that host recorded exactly 1 successful SSH login. One. In practice it was key-only, so nobody legitimate was typing a password at it, including me.</p>
+
+  <p>Which means every false-positive figure I could compute is 1 divided by something large. I can multiply that out and get a percentage that looks fantastic, and it would be worth nothing. A sample size of one doesn't become a rate because you formatted it with a percent sign. So the write-up says counts, and says n=1 in the same breath, because that's the first thing a reviewer would catch and I'd rather hand it over than get caught holding it.</p>
+
+  <p>And the one false positive is me.</p>
+
+<pre tabindex="0"><code>08-07 01:46:59  Failed password for invalid user zach from 172.58.x.x
+08-07 01:47:10  Failed password for invalid user zach from 172.58.x.x
+08-07 01:48:07  Failed password for invalid user zach from 172.58.x.x
+   (+2 more, second session, through 01:48:54)
+08-08 00:46:40  Accepted publickey for root from 172.58.x.x  (ED25519)</code></pre>
+
+  <p>I'd typed the wrong username. The account is <code>root</code>, and I sat there feeding it <code>zach</code> 5 times in about 2 minutes, from a T-Mobile address. The next day I came back with the right key and got straight in.</p>
+
+  <p>At 3 in 600, my own detector blocks that address. Reading my own name in a log line I generated by being sloppy is a specific kind of feeling, and I recommend it.</p>
+
+  <p>The thing is, it's a correct detection. 5 failures from one source inside 2 minutes is exactly the shape of the traffic I built this to catch. From where the detector sits there was nothing to tell my fumbling apart from the 1,878 other addresses trying their luck. It reads behavior, and it has no access to intent. Mine were good. That's invisible.</p>
+
+  <p>So the fix is an exception list, which was already milestone 4 in my plan. What changed is that I'd written it down as a precaution, the way you do, and now I have a measured reason for it and an incident to point at.</p>
+
+  <p>The alternative fix is to raise the threshold, and the grid says what that costs. At 10 failures the detector never touches my address. It also hands every real attacker 7 more guesses before it says anything. That trade is easy to argue about in the abstract and much less fun when you have to write the number down.</p>
+
+  <p>Then the sweep found something I'd have shipped without noticing.</p>
+
+  <p>The allowlist I'd sketched was <code>192.168.12.0/24</code>, my home LAN, because obviously I want my own network exempt. Private addresses can't appear as source IPs in a remote server's auth log. NAT rewrites them to whatever public address my ISP handed out that morning. That allowlist would have protected nothing at all while sitting in the config looking like it protected everything, which is worse than not having one, because it stops you thinking about the problem.</p>
+
+  <p>The only confirmed-good source in 34 days of data is a mobile carrier address. Carrier addresses rotate. So allowlisting by IP is weak on this host specifically, and I don't have a good answer for it yet. That one's still open.</p>
+
+  <p>One more thing has to go in the write-up, and it's the one I was tempted to leave out.</p>
+
+  <p>The VPS is gone. It was already being retired when I pulled these logs, and this site runs on Cloudflare now. The machine I'd actually deploy this to is a completely different box with a different exposure profile and no comparable capture. So 3 in 600 is a defensible number derived from the wrong machine, and it would need deriving again after 30 days of data on the new one.</p>
+
+  <p>Control tuning is specific to the environment you tuned it in. Saying so out loud costs me the clean ending and it's the honest state of the thing.</p>
+
+  <p>The raw capture doesn't get published, and won't. It has 1,914 real source addresses in it, a pile of attempted usernames, a key fingerprint, and one of my own carrier IPs. It's been in <code>.gitignore</code> since the first commit and there's no blob for it anywhere in the history. Findings go out, evidence stays home.</p>
+
+  <p>I could have generated fake traffic instead and had something reproducible to hand people. It would have taken an afternoon. It would also have made the only claim worth making, that this number came from a system I actually ran, into a lie. That's an unrecoverable thing to be caught doing in this field, and it isn't a close call.</p>
+
+  <p>What I'm left with is a number I can defend, a documented way it fails, a control I know the miss rate of, and a note saying it has to be done again somewhere else. That's a worse-looking result than the one I set out to get.</p>
+
+  <p>It's the first thing I've built where I'd be comfortable being asked about it in detail.</p>
+
+  <p>The detector, the sweep script, and the full results are in the repo: <a href="https://github.com/zellerbrook/ssh-detect-respond">ssh-detect-respond</a>. The <a href="/work/ssh-detect-respond">project page</a> has the short version.</p>
+</article>
+</main>
+
+<footer class="page site-footer">
+  <ul>
+    <li><a href="https://github.com/zellerbrook">GitHub</a></li>
+    <li><a href="https://www.linkedin.com/in/zachary-ellerbrook/">LinkedIn</a></li>
+    <li><a href="mailto:zach@zachellerbrook.com">zach@zachellerbrook.com</a></li>
+  </ul>
+</footer>
+
+</body>
+</html>
