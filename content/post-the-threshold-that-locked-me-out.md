@@ -46,7 +46,7 @@ At 3 in 600, my own detector blocks that address. Reading my own name in a log l
 
 The thing is, it's a correct detection. 5 failures from one source inside 2 minutes is exactly the shape of the traffic I built this to catch. From where the detector sits there was nothing to tell my fumbling apart from the 1,878 other addresses trying their luck. It reads behavior, and it has no access to intent. Mine were good. That's invisible.
 
-So the fix is an exception list, which was already milestone 4 in my plan. What changed is that I'd written it down as a precaution, the way you do, and now I have a measured reason for it and an incident to point at.
+So the fix is an exception list, which was milestone 4 in my plan. I'd written it down as a precaution, the way you do, and the sweep turned that into a measured reason and an incident to point at. Milestone 4 is still cut, and `SCOPE.md` in the repo says why. The argument for it got better and the scoping decision held.
 
 The alternative fix is to raise the threshold, and the grid says what that costs. At 10 failures the detector never touches my address. It also hands every real attacker 7 more guesses before it says anything. That trade is easy to argue about in the abstract and much less fun when you have to write the number down.
 
