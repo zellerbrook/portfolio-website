@@ -2,7 +2,7 @@
 title: About
 description: Zach Ellerbrook. Access control and personnel security for a 35 to 40 person Navy organization in an RMF-governed federal system. Secret clearance. Chicago.
 url: /about
-date: 2026-08-15
+date: 2026-09-04
 status: publish
 image: /images/zach-ellerbrook.jpg
 image_alt: Zach Ellerbrook on a rooftop, Chicago buildings behind him in late afternoon light.
@@ -22,7 +22,9 @@ I also train incoming members on the enterprise systems and the security expecta
 
 I'm the first call when something stops working, too, which is more turning it off and back on again than I'd care to admit. Anything that has to touch the network itself goes to NMCI field services.
 
-On my own time I build security tools and write down what I learn doing them. At the moment that's a Python tool that reads SSH authentication logs and watches for brute-force attempts, along with the writeups that go with it.
+The other thing on my plate is [the command's migration to the Navy's Nautilus environment](/work), 32 enterprise workstations, which I own as its only IT resource. 15 were converted before the role came to me. The other 17 are mine through cutover.
+
+On my own time I build security tools and write down what I learn doing them. The last one was [a Python tool](/work/ssh-detect-respond) that reads SSH authentication logs and watches for brute-force attempts. I finished it as scoped, cut the milestones that would have been me rewriting `fail2ban` badly, and derived its detection threshold from 34 days of real auth logs rather than picking a number that looked reasonable. The [write-ups](/writing/the-threshold-that-locked-me-out) cover what broke and what the data wouldn't support.
 
 The civilian name for the day job is identity and access management, and past that, the risk and compliance side it answers to. That's the work I'm looking for in Chicago.
 
