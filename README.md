@@ -12,10 +12,10 @@ Two posts and one project write-up so far. The project is [ssh-detect-respond](h
 
 ## Structure
 
-- `content/` — markdown source for each page, with frontmatter
-- `public/` — exactly what Pages serves: the HTML, one stylesheet, self-hosted fonts
-- `docs/specimen.html` — the type and color specimen the design was signed off against
-- `CLAUDE.md` — operating notes, design constraints, and the facts copy is allowed to claim
+- `content/` holds the markdown source for each page, with frontmatter.
+- `public/` is exactly what Pages serves: the HTML, one stylesheet, self-hosted fonts.
+- `docs/specimen.html` is the type and color specimen the design was signed off against.
+- `CLAUDE.md` carries the operating notes, the design constraints, and the facts copy is allowed to claim.
 
 Everything under `public/` is published. Operational notes and drafts stay out of it.
 
