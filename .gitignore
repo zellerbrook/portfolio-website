@@ -1,6 +1,8 @@
 .claude/
 anti-ai-writing-style.md
 site-build-kickoff-prompt.md
+docs/deploy-notes.md
+docs/design-refs/
 *.odt
 .DS_Store
 .~lock.*#
