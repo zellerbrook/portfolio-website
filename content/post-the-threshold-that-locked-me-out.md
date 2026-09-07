@@ -12,7 +12,7 @@ My SSH detector blocks an address after 3 failed passwords in 600 seconds.
 
 That number sat in the code for weeks before I could tell you why it was 3 and not 5. It looked reasonable. It matched what I'd seen elsewhere. Nobody was going to ask.
 
-Then I read a control mapping I'd written for the same project, saw the line where I'd have to hand an assessor my configuration and defend it, and realized I had a number and no argument.
+Then I reread a control mapping I'd written for the same project, got to the line where the configuration is the evidence, and realized I had a number and no argument.
 
 So I went and got one.
 
@@ -60,7 +60,7 @@ One more thing has to go in the write-up, and it's the one I was tempted to leav
 
 The VPS is gone. It was already being retired when I pulled these logs, and this site runs on Cloudflare now. The machine I'd actually deploy this to is a completely different box with a different exposure profile and no comparable capture. So 3 in 600 is a defensible number derived from the wrong machine, and it would need deriving again after 30 days of data on the new one.
 
-Control tuning is specific to the environment you tuned it in. Saying so out loud costs me the clean ending and it's the honest state of the thing.
+A tuned number carries the box it came off with it. I learned that by losing the box, which is later than I'd have liked to learn it. Saying so costs me the clean ending and it's the honest state of the thing.
 
 The raw capture doesn't get published, and won't. It has 1,914 real source addresses in it, a pile of attempted usernames, a key fingerprint, and one of my own carrier IPs. It's been in `.gitignore` since the first commit and there's no blob for it anywhere in the history. Findings go out, evidence stays home.
 

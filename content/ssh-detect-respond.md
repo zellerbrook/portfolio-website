@@ -123,4 +123,4 @@ I'd rather list these than sound finished.
 - The detector keeps state in memory only. Restart it and it forgets every address it was tracking, so an attacker patient enough to wait one out starts from zero.
 - The threshold comes from a host that's since been decommissioned. The machine this would deploy to has a different exposure profile and no comparable capture, so that sweep would need running again after 30 days of data there.
 
-One more, and it's a limit rather than a bug. This is a detective control. It reads logs, recognizes a pattern, and reports it. It doesn't prevent anything and it doesn't respond, because those were the milestones I cut. On a host that's effectively key-only, what it delivers is log hygiene and evidence.
+One more, and it's a limit rather than a bug. The repo is called ssh-detect-respond and it doesn't respond. Cutting milestones 4 through 8 left a detective control: it reads logs, recognizes a pattern, and reports it. On a host that's effectively key-only, what it delivers is log hygiene and evidence.

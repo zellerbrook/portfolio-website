@@ -28,6 +28,8 @@ The first real thing here is a writeup of a tool I'm building that reads SSH log
 
 I'd rather be publicly wrong about that now than privately wrong about it in an interview.
 
+Most of what's in that writeup I worked out at the keyboard and looked up the proper name for afterward. The bug taught me the shape and a search taught me the vocabulary, and I'd sooner put that order on the record myself.
+
 There's one more thing I want to settle here, and it's the one I'm least sure about. I've been leaning on AI to write code I couldn't have written as quickly on my own, and I'm still working out what that's buying me and what it's costing.
 
 I have opinions forming. That one gets its own post.
